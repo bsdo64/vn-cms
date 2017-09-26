@@ -47,6 +47,8 @@ module.exports = {
     historyApiFallback: true,
   },
 
+  target: "web",
+
   module: {
     rules: [
       {
@@ -60,7 +62,7 @@ module.exports = {
           'style-loader',
           'css-loader?modules&localIdentName=[name]---[local]---[hash:base64:5]&importLoaders=1',
           'postcss-loader'
-        ],
+        ]
       },
     ],
   },

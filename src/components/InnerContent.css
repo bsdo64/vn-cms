@@ -1,0 +1,12 @@
+.inner-content {
+  float: right;
+  width: 100%;
+  max-width: 650px;
+}
+
+@media (max-width: 960px) {
+  .inner-content {
+    width: calc(100% - 240px);
+    max-width: 100%;
+  }
+}

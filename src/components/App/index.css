@@ -1,17 +1,4 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-html {
-  font-family: 'Noto Sans KR', serif;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: #969696;
-}
-
-.app {
+.container {
   width: 100%;
-  margin: 0 auto;
-  background: #ffffff;
+  padding-top: 50px;
 }
