@@ -4,17 +4,18 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import cx from 'classnames';
 
 import 'normalize.css/normalize.css';
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css';
-import style from './index.css';
+import '!style-loader!css-loader!./dashboard.css';
 
 import NavMain from '../NavMain.js';
 import Content from '../Content.js';
 
 const App = () => (
   <Router>
-    <div className={style.container}>
+    <div>
       <NavMain />
       <Content />
     </div>
