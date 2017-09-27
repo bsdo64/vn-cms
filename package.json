@@ -26,10 +26,13 @@
     "webpack-dev-server": "^2.8.1"
   },
   "dependencies": {
+    "bootstrap": "4.0.0-beta",
     "classnames": "^2.2.5",
     "express": "^4.15.4",
     "hbs": "^4.0.1",
+    "jquery": "^3.2.1",
     "morgan": "^1.8.2",
+    "popper.js": "^1.12.5",
     "purecss": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

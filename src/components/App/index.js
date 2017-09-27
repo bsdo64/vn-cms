@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import 'normalize.css/normalize.css';
+import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css';
 import style from './index.css';
 
 import NavMain from '../NavMain.js';
