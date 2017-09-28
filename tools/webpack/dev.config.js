@@ -6,6 +6,7 @@ module.exports = {
   context: resolve(root, 'src'),
 
   entry: [
+    'babel-polyfill',
     'react-hot-loader/patch',
     // activate HMR for React
 

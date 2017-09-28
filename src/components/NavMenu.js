@@ -13,116 +13,112 @@ class NavMenu extends Component {
 
   render() {
     return (
-        <div className={style['nav-docs']}>
+      <div className="col-12 col-md-3 col-xl-2 bd-sidebar">
 
-          <div className="nav-docs-section">
-            <h3>베나클 설정</h3>
-            <ul>
+        <nav className="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
 
-              <li>
-                <a href="/react/docs/installation.html">설치 설정</a>
-
+          <div>
+            <ul className="nav nav-pills flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">대쉬보드</a>
               </li>
-
-              <li>
-                <a href="/react/docs/hello-world.html">기본 설정</a>
-
+            </ul>
+          </div>
+          <div>
+            <span className="nav-link active" href="#">베나클 설정</span>
+            <ul className="nav nav-pills flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">설치 설정</a>
               </li>
-
+              <li className="nav-item">
+                <a className="nav-link active" href="#">기본 설정</a>
+              </li>
             </ul>
           </div>
 
-          <div className="nav-docs-section">
-            <h3>데이터</h3>
-            <ul>
-
-              <li>
-                <a href="/react/docs/react-dom.html">회원</a>
-
+          <div>
+            <span className="nav-link active" href="#">회원 설정</span>
+            <ul className="nav nav-pills flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">회원 리스트</a>
               </li>
-
-              <li>
-                <a href="/react/docs/react-api.html">포스트</a>
-
+              <li className="nav-item">
+                <a className="nav-link" href="#">접속 회원</a>
               </li>
-
-              <li>
-                <a href="/react/docs/react-dom.html">댓글</a>
-
-              </li>
-
-              <li>
-                <a href="/react/docs/react-dom-server.html">대댓글</a>
-
-              </li>
-
-              <li>
-                <a href="/react/docs/dom-elements.html">좋아요</a>
-
-              </li>
-
-              <li>
-                <a href="/react/docs/events.html">링크</a>
-
-                <ul>
-                  <li><a href="#">일반링크</a></li>
-                  <li><a href="#">베나링크</a></li>
-                </ul>
-              </li>
-
             </ul>
           </div>
 
-          <div className="nav-docs-section">
-            <h3>DB</h3>
-            <ul>
-
-              <li>
-                <a href="/react/docs/react-dom.html">회원</a>
-
+          <div>
+            <span className="nav-link active" href="#">컨텐츠 설정</span>
+            <ul className="nav nav-pills flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">포스트 리스트</a>
               </li>
-
+              <li className="nav-item">
+                <a className="nav-link" href="#">댓글 리스트</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">대댓글 리스트</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">좋아요 리스트</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">공유 리스트</a>
+              </li>
             </ul>
           </div>
 
-          <div className="nav-docs-section">
-            <h3>통계</h3>
-            <ul>
-
-              <li>
-                <a href="/react/docs/jsx-in-depth.html">기본 데이터</a>
-
+          <div>
+            <span className="nav-link active" href="#">데이터 베이스 설정</span>
+            <ul className="nav nav-pills flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">설치 설정</a>
               </li>
-
-              <li>
-                <a href="/react/docs/jsx-in-depth.html">기본 데이터</a>
-
+              <li className="nav-item">
+                <a className="nav-link" href="#">기본 설정</a>
               </li>
-
             </ul>
           </div>
 
-          <div className="nav-docs-section">
-            <h3>광고</h3>
-            <ul>
-
-              <li>
-                <a href="/react/docs/jsx-in-depth.html">기본 데이터</a>
-
+          <div>
+            <span className="nav-link active" href="#">포인트 & 결제</span>
+            <ul className="nav nav-pills flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">결제 리스트</a>
               </li>
-              <li>
-                <a href="/react/docs/jsx-in-depth.html">베너</a>
-
+              <li className="nav-item">
+                <a className="nav-link" href="#">포인트</a>
               </li>
-              <li>
-                <a href="/react/docs/jsx-in-depth.html">광고 문의</a>
-
-              </li>
-
             </ul>
           </div>
 
-        </div>
+          <div>
+            <span className="nav-link active" href="#">통계</span>
+            <ul className="nav nav-pills flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">기본 데이터</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">기본 설정</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <span className="nav-link active" href="#">광고</span>
+            <ul className="nav nav-pills flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">광고 문의</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">베너</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
     )
   }
 }
