@@ -1,6 +1,7 @@
 const express = require('express');
 const { resolve } = require('path');
 const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -23,6 +24,8 @@ app.use(session({
   name: 'vn-cms'
 }));
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(morgan('short'));
 
 // Ajax data
@@ -30,9 +33,6 @@ app.use('/ajax', Ajax);
 
 // Rendering
 app.get('*', (req, res, next) => {
-  console.log(req.session);
-  console.log(req.headers);
-
   res.render('index.hbs', {
     production: process.env.NODE_ENV === 'production'
   });

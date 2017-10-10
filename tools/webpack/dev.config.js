@@ -48,8 +48,6 @@ module.exports = {
     historyApiFallback: true,
   },
 
-  target: "web",
-
   module: {
     rules: [
       {

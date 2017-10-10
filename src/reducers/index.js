@@ -1,19 +1,14 @@
 import { Map } from 'immutable';
-import {combineReducers, createStore} from "redux";
+import {combineReducers} from "redux";
 
-export const Domains = (state = Map({}), action) => state;
-
-export const UI = (state = Map({}), action) => {
+const Login = (state = Map({}), action) => {
   switch (action.type) {
     case 'REQUEST_LOGIN': {
-      const newMap = state.set('Auth', Map(action.payload));
-      console.log(newMap);
-
-      return newMap;
+      return state;
     }
 
     case 'REQUEST_SUCCESS_LOGIN': {
-      return state;
+      return state.set('Auth', Map(action.payload));
     }
 
     default : {
@@ -21,3 +16,9 @@ export const UI = (state = Map({}), action) => {
     }
   }
 };
+
+export const Domains = (state = Map({}), action) => state;
+
+export const UI = combineReducers({
+  Login,
+});

@@ -5,10 +5,7 @@ import cx from 'classnames';
 
 class NavMenu extends Component {
   componentDidMount() {
-    r.get('/ajax')
-        .then(r => {
-          console.log(r);
-        })
+
   }
 
   render() {

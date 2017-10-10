@@ -34,7 +34,7 @@ class App extends Component {
 const mapStateToProps = (state, ownProps) => {
 
   return {
-    auth: state.UI.get('Auth')
+    auth: state.UI.Login
   }
 };
 

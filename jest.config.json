@@ -1,0 +1,9 @@
+{
+  "automock": false,
+  "testEnvironment": "node",
+  "verbose": true,
+  "projects": [
+    "<rootDir>/",
+    "<rootDir>/server/*"
+  ]
+}
