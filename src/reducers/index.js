@@ -1,19 +1,23 @@
+import { Map } from 'immutable';
 import {combineReducers, createStore} from "redux";
 
-// reducers.js
-function theDefaultReducer (state = 0, action) {
-  return state;
-}
+export const Domains = (state = Map({}), action) => state;
 
-const firstNamedReducer = (state = 1, action) => state;
+export const UI = (state = Map({}), action) => {
+  switch (action.type) {
+    case 'REQUEST_LOGIN': {
+      const newMap = state.set('Auth', Map(action.payload));
+      console.log(newMap);
 
-const secondNamedReducer = (state = 2, action) => state;
+      return newMap;
+    }
 
-const rootReducer = combineReducers({
-  theDefaultReducer,
-  firstNamedReducer,
-  secondNamedReducer
-});
+    case 'REQUEST_SUCCESS_LOGIN': {
+      return state;
+    }
 
-// Use ES6 object literal shorthand syntax to define the object shape
-export default rootReducer;
+    default : {
+      return state;
+    }
+  }
+};

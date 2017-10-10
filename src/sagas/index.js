@@ -5,9 +5,9 @@ import Api from 'superagent'
 function* fetchUser(action) {
   try {
     const user = yield call(Api, action.payload.userId);
-    yield put({type: "USER_FETCH_SUCCEEDED", user: user});
+    yield put({type: "REQUEST_SUCCESS_LOGIN", user: user});
   } catch (e) {
-    yield put({type: "USER_FETCH_FAILED", message: e.message});
+    yield put({type: "REQUEST_FAIL_LOGIN", message: e.message});
   }
 }
 
@@ -16,7 +16,7 @@ function* fetchUser(action) {
   Allows concurrent fetches of user.
 */
 function* mySaga() {
-  yield takeEvery("USER_FETCH_REQUESTED", fetchUser);
+  yield takeEvery("REQUEST_LOGIN", fetchUser);
 }
 
 export default mySaga;

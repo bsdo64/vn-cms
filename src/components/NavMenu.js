@@ -52,6 +52,9 @@ class NavMenu extends Component {
             <span className="nav-link active" href="#">컨텐츠 설정</span>
             <ul className="nav nav-pills flex-column">
               <li className="nav-item">
+                <a className="nav-link" href="#">클럽 리스트</a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="#">포스트 리스트</a>
               </li>
               <li className="nav-item">

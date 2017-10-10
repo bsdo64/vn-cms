@@ -5,9 +5,9 @@ import { AppContainer } from 'react-hot-loader';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 
-import createHistory from 'history/createBrowserHistory'
-import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
-import reducers from './reducers/index.js' // Or wherever you keep your reducers
+import createHistory from 'history/createBrowserHistory';
+import { ConnectedRouter, routerMiddleware, routerReducer, } from 'react-router-redux'
+import * as reducers from './reducers/index.js' // Or wherever you keep your reducers
 import createSagaMiddleware from 'redux-saga'
 import mySaga from './sagas/index.js'
 import App from './components/App/index.js';
@@ -28,7 +28,7 @@ const store = createStore(
       ...reducers,
       router: routerReducer
     }),
-    composeEnhancers(applyMiddleware(sagaMiddleware, middleware))
+    composeEnhancers(applyMiddleware(sagaMiddleware, middleware)),
 );
 
 
