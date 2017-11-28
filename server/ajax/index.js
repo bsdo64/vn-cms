@@ -14,7 +14,7 @@ router.post('/login', (req, res, next) => {
     .then((r) => {
 
       if (r) {
-        console.log(req.session);
+        console.log(r);
       }
 
 
