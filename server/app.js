@@ -33,6 +33,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan('short'));
+app.use(express.static(__dirname + '/assets'));
 
 // Ajax data
 app.use('/ajax', Ajax);

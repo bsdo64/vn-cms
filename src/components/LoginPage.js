@@ -8,8 +8,8 @@ import style from './LoginPage.css';
 
 class LoginPage extends Component {
   state = {
-    inputEmail: null,
-    inputPassword: null,
+    loginId: null,
+    loginPassword: null,
   };
 
   changeIdPass = (e) => {
@@ -24,7 +24,7 @@ class LoginPage extends Component {
 
     console.log(this.state);
 
-    if (this.state.inputEmail && this.state.inputPassword) {
+    if (this.state.loginId && this.state.loginPassword) {
       this.props.requestLogin(this.state);
     }
   };
@@ -35,13 +35,13 @@ class LoginPage extends Component {
 
         <form className={style['form-signin']} onSubmit={this.requestLogin}>
           <h2 className={style['form-signin-heading']}>Login</h2>
-          <label htmlFor="inputEmail" className="sr-only">Email address</label>
-          <input type="email" id="inputEmail"
-                 className={cx(style['form-control'], 'form-control')} placeholder="Email address"
+          <label htmlFor="loginId" className="sr-only">Email address</label>
+          <input type="email" id="loginId"
+                 className={cx(style['form-control'], 'form-control')} placeholder="Id"
                  required="" autoFocus=""
                  onChange={this.changeIdPass} />
-          <label htmlFor="inputPassword" className="sr-only">Password</label>
-          <input type="password" id="inputPassword"
+          <label htmlFor="loginPassword" className="sr-only">Password</label>
+          <input type="password" id="loginPassword"
                  className={cx(style['form-control'], 'form-control')} placeholder="Password"
                  required=""
                  onChange={this.changeIdPass} />

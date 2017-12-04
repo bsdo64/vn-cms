@@ -5,10 +5,15 @@ const router = express.Router();
 const redis = require('../tools/redis');
 
 router.post('/login', (req, res, next) => {
+  const user = {
+    id: req.body.loginId,
+    password: req.body.loginPassword
+  };
+
   Models
     .tc_users
     .query()
-    .where('email', '=', req.body.inputEmail)
+    .where('email', '=', user.id)
     .eager('password')
     .first()
     .then((r) => {
