@@ -1,6 +1,6 @@
 {
   "presets": [
-    ["es2015", {"modules": false}],
+    ["env", {"modules": false}],
     "react",
     "stage-2"
   ],
@@ -9,7 +9,7 @@
   ],
   "env": {
     "test": {
-      "presets": [["es2015"]]
+      "presets": [["env"]]
     }
   }
 }

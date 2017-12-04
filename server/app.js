@@ -21,7 +21,13 @@ app.use(session({
     db: 1
   }),
   secret: 'keyboard cat',
-  name: 'vn-cms'
+  name: 'vn-cms',
+  cookie: {
+    domain: '/',
+    maxAge: 60 * 60 * 1000 // 1 hour
+  },
+  resave: false,
+  saveUninitialized: false
 }));
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -33,6 +39,9 @@ app.use('/ajax', Ajax);
 
 // Rendering
 app.get('*', (req, res, next) => {
+
+  console.log(req.session);
+
   res.render('index.hbs', {
     production: process.env.NODE_ENV === 'production'
   });
